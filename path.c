@@ -37,8 +37,9 @@ return (NULL);
 char *get_path(char *command)
 {
 	char *path, *split, *cp_path;
-	char new_path[1024];
+	char *new_path;
 	struct stat st;
+	size_t len;
 
 	path = _getenv("PATH", environ);
 
@@ -55,7 +56,9 @@ char *get_path(char *command)
 
 	while (split !=  NULL)
 	{
-		snprintf(new_path, sizeof(new_path), "%s/%s", split, command);
+		len = strlen(split) + strlen(command) + 2;
+		new_path = malloc(sizeof(char) * len);
+		snprintf(new_path, len, "%s/%s", split, command);
 		if (stat(new_path, &st) == 0)
 		{
 			free(cp_path);
