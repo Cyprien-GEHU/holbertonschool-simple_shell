@@ -64,7 +64,7 @@ char *get_path(char *command)
 			return (strdup(new_path));
 		}
 
-		free (new_path);
+		free(new_path);
 
 		split = strtok(NULL, ":");
 	}

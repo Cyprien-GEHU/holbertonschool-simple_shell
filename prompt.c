@@ -3,7 +3,7 @@
 /**
  * handle - handle the EOF and CTRL C
  *
- * @singal : we don't use
+ * @signal : we don't use
  */
 
 void handle(int signal)
@@ -32,7 +32,7 @@ void prompt(void)
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
-		if(isatty(STDIN_FILENO))
+		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "$", 1);
 	}
 	else

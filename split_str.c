@@ -1,9 +1,11 @@
 #include "shell.h"
 
 /**
+ * _string - split the input and create a array with argument
  *
+ * @input : the input
  *
- *
+ * Return: the array with argument
  */
 
 char **_string(char *input)
@@ -12,8 +14,8 @@ char **_string(char *input)
 	char *token;
 	size_t x = 0, z;
 
-	if (arg == NULL)
-	       return (NULL);
+	if (!arg)
+		return (NULL);
 
 	token = strtok(input, " \n\t");
 	while (token)

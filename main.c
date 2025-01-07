@@ -18,10 +18,9 @@ int main(void)
 		prompt();
 		text = input_read();
 		arg = _string(text);
-		
+
 		full_path = get_path(arg[0]);
-		printf("%s\n", full_path);
-		/*execve(full_path, arg, environ);*/
+		execve(full_path, arg, environ);
 	}
 	return (0);
 }
