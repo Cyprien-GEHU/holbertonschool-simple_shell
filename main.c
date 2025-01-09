@@ -8,19 +8,41 @@
 
 int main(void)
 {
-	char *text, *full_path;
-	char **arg = NULL;
+	char *text, **arg;
+	int  x;
 
 	signal(SIGINT, handle);
-
 	while (1)
 	{
 		prompt();
 		text = input_read();
+		if (!text)
+			break;
+		if (strcmp(text, "\n") == 0 || strlen(text) == 0)
+		{
+			free(text);
+			continue;
+		}
+		if (text[strlen(text)] == '\n')
+			text[strlen(text)] = '\0';
+		if (strcmp(text, "exit") == 0)
+		{
+			free(text);
+			exit(0);
+		}
 		arg = _string(text);
+		if (!arg)
+		{
+			free(text);
+			continue;
+		}
+		if (arg[0] != NULL)
+			execute_command(arg);
 
-		full_path = get_path(arg[0]);
-		execve(full_path, arg, environ);
+		for (x = 0; arg[x] != NULL; x++)
+			free(arg[x]);
+		free(arg);
+		free(text);
 	}
 	return (0);
 }
