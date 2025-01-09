@@ -12,19 +12,26 @@ char **_string(char *input)
 {
 	char **arg = malloc(sizeof(char *) * 1024);
 	char *token;
-	size_t x = 0, z;
+	size_t x = 0, z = 0;
 
 	if (!arg)
 		return (NULL);
 
 	token = strtok(input, " \n\t");
+
+	if (!token)
+	{
+		free(arg);
+		return (NULL);
+	}
+
 	while (token)
 	{
 		arg[x] = strdup(token);
 
 		if (!arg[x])
 		{
-			for (z = 0; z < x; z++)
+			for (; z < x; z++)
 				free(arg[x]);
 			free(arg);
 			return (NULL);
@@ -32,6 +39,7 @@ char **_string(char *input)
 		x++;
 		token = strtok(NULL, " \n\t");
 	}
+	free(token);
 	arg[x] = NULL;
 	return (arg);
 }

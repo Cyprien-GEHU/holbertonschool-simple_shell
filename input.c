@@ -8,14 +8,14 @@
 
 char *input_read(void)
 {
-	char *command;
-	size_t n;
+	char *command = NULL;
+	size_t n = 0;
 	int line;
 
 	line = getline(&command, &n, stdin);
+
 	if (line == -1)
 	{
-		printf("error");
 		free(command);
 		return (NULL);
 	}
