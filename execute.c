@@ -34,7 +34,7 @@ int ex_build(char **args)
 
 	if (strcmp(args[0], "exit") == 0)
 	{
-		free(args)
+		free(args);
                 exit(0);
 	}
 
