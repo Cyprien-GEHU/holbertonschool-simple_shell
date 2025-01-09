@@ -32,9 +32,10 @@ int ex_build(char **args)
 		return (1);
 	}
 
-	if (strcmp(args[0], "exit") == 0 && args[1] != NULL)
+	if (strcmp(args[0], "exit") == 0)
 	{
-		return (1);
+		free(args)
+                exit(0);
 	}
 
 	if (strcmp(args[0], "exit") == 0)
