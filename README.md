@@ -37,11 +37,6 @@ Compiler options explained:
 `-pedantic`: Enforces strict C compliance.
 
 `-std=gnu89`: Specifies the GNU89 standard for compatibility.
-## Demo
-
-Insert gif or link to demo
-
-
 ## 4. Usage 🖥️
 Running the Shell:
 
