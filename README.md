@@ -74,6 +74,9 @@ command's status.
 * Description: Prints the current environment variables.
 * Usage: `env`
 ## 6. Man Page 📖
+
+
+![Flowchart](https://i.postimg.cc/ZYHxfRrW/temp-Image37-Miyl.avif)
 ## 7. Files Included 📂
 
 * main.h: Header file containing all function prototypes and macros.
@@ -96,7 +99,7 @@ $ env
 HOME=/home/user
 PATH=/usr/local/bin:/usr/bin:/bin
 $ ls
-file.c  shell.c  README.md
+main.c  shell.h  README.md
 $ exit
 ```
 ## 9. Requirements 📝
