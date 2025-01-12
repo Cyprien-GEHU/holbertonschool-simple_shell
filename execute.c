@@ -35,12 +35,6 @@ int ex_build(char **args)
 	if (strcmp(args[0], "exit") == 0)
 	{
 		free(args);
-                exit(0);
-	}
-
-	if (strcmp(args[0], "exit") == 0)
-	{
-		free(args);
 		exit(0);
 	}
 
