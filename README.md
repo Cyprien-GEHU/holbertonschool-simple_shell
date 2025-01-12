@@ -111,5 +111,8 @@ $ exit
 * Limitations:No global variables allowed.
 Maximum of 5 functions per file.
 
+## Flowchart
+
+![Flowchart](https://media.discordapp.net/attachments/1318198084924215388/1327706747669839963/image.png?ex=6784b384&is=67836204&hm=57b728d737aba9a6e7047cac2472a93447f32bf7193f7a7faf34dc985205418b&=&format=webp&quality=lossless&width=1412&height=910)
 ## 10. Authors ✒️
 [@Cyprien-GEHU](https://www.github.com/@Cyprien-GEHU) & [@Iyed13tns](https://www.github.com/Iyed13tns)
